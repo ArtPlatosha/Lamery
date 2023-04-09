@@ -59,6 +59,46 @@ body {
 .header__burger {
   display: none;
 }
+@media (max-width: 768px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    height: 5px;
+    width: 40px;
+    z-index: 52;
+    transition: all 0.3s ease-in-out;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background-color: #fff;
+    margin: auto;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .header__burger::before {
+    top: 5px;
+    right: 0;
+    width: 75%;
+    transform-origin: right;
+  }
+  .header__burger::after {
+    bottom: 5px;
+    right: 0;
+    width: 100%;
+    transform-origin: right;
+    background-color: #fff;
+  }
+  .header__burger:active::after {
+    width: 75%;
+    background-color: #fff;
+  }
+  .header__burger:active::before {
+    width: 100%;
+    background-color: #fff;
+  }
+}
 
 .menu {
   font-family: "Poppins", sans-serif;

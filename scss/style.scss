@@ -64,6 +64,50 @@ body {
 
 	&__burger {
 		display: none;
+		@media (max-width: 768px) {
+			display: block;
+			position: relative;
+			height: 5px;
+			width: 40px;
+			z-index: 52;
+			transition: all .3s ease-in-out;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				height: 5px;
+				background-color: #fff;
+				margin: auto;
+				width: 100%;
+				transition: all .3s ease-in-out;
+			}
+
+			&::before {
+				top: 5px;
+				right: 0;
+				width: 75%;
+				transform-origin: right;
+			}
+
+			&::after {
+				bottom: 5px;
+				right: 0;
+				width: 100%;
+				transform-origin: right;
+				background-color: #fff;
+			}
+
+			&:active::after {
+				width: 75%;
+				background-color: #fff;
+			}
+
+			&:active::before {
+				width: 100%;
+				background-color: #fff;
+			}
+		}
 	}
 }
 
