@@ -4,4 +4,110 @@
   src: url("../fonts/RealityHyperRegular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
+}
+body {
+  font-family: "Reality Hyper", sans-serif;
+  color: #fff;
+  background-color: #1b1a1f;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  padding: 30px 0;
+  border-bottom: 1px solid #8d8c8f;
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1a1f;
+  z-index: 52;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  position: relative;
+  z-index: 52;
+  margin-right: 10px;
+}
+.header__logo img {
+  max-width: 100%;
+}
+.header__burger {
+  display: none;
+}
+
+.menu {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 52;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.menu__link {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.menu__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #eb4c56;
+  transition: all 0.3s ease-in-out;
+  bottom: -29px;
+}
+.menu__link:hover::after, .menu__link:focus::after {
+  width: 100%;
+}
+.menu__link:hover {
+  color: #eb4c56;
+}
+
+.menu-user {
+  position: relative;
+  z-index: 52;
+  margin-right: 10px;
+}
+.menu-user__list {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+}
+.menu-user__link {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.menu-user__link:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
