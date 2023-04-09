@@ -64,50 +64,45 @@ body {
 
 	&__burger {
 		display: none;
-		@media (max-width: 768px) {
-			display: block;
-			position: relative;
-			height: 5px;
-			width: 40px;
-			z-index: 52;
-			transition: all .3s ease-in-out;
-
-			&::before,
-			&::after {
-				content: '';
-				position: absolute;
-				height: 5px;
-				background-color: #fff;
-				margin: auto;
-				width: 100%;
-				transition: all .3s ease-in-out;
-			}
-
-			&::before {
-				top: 5px;
-				right: 0;
-				width: 75%;
-				transform-origin: right;
-			}
-
-			&::after {
-				bottom: 5px;
-				right: 0;
-				width: 100%;
-				transform-origin: right;
-				background-color: #fff;
-			}
-
-			&:active::after {
-				width: 75%;
-				background-color: #fff;
-			}
-
-			&:active::before {
-				width: 100%;
-				background-color: #fff;
-			}
-		}
+		@media (max-width: 768px){
+            display: block;
+            position: relative;
+            height: 5px;
+            width: 40px;
+            z-index: 52;
+            transition: all 0.3s ease;
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                height: 5px;
+                background-color: #fff;
+                margin: auto;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+            }
+            &::before{
+                top: 5px;
+                right: 0;
+                width: 75%;
+                transform-origin: right;
+            }
+            &::after{
+                bottom: 5px;
+                right: 0;
+                width: 100%;
+                transform-origin: right;
+                background-color: #fff;
+            }
+            &.active::after{
+                width: 75%;
+                background-color: #fff;
+            }
+            &.active::before{
+                width: 100%;
+                background-color: #fff;
+            }
+        }
 	}
 }
 
@@ -116,21 +111,45 @@ body {
 	position: relative;
 	z-index: 52;
 
+	@media (max-width: 768px) {
+		position: fixed;
+		top: -100%;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #1b1a1f;
+		padding: 120px 0 0;
+		overflow: auto;
+		transition: all .3s ease-in-out;
+		z-index: 50;
+
+		&.active {
+			top: 0;
+		}
+	}
+
 	&__list {
 		display: flex;
 		align-items: center;
 		gap: 50px;
+		
+		@media (max-width: 768px) {
+			display: block;
+			text-align: center;
+		}
 	}
 
 	&__item {
-
+		@media (max-width: 768px) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__link {
 		color: #fff;
 		transition: all .3s ease-in-out;
 		position: relative;
-		
+
 		&::after {
 			content: '';
 			display: block;
