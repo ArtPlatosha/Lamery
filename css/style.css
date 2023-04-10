@@ -178,4 +178,68 @@ body {
 }
 .menu-user__link:hover {
   transform: scale(1.2);
+}
+
+.hero {
+  padding-top: 100px;
+  position: relative;
+  z-index: 5;
+}
+.hero__items {
+  margin-left: 50px;
+  margin-bottom: 70px;
+}
+.hero__item {
+  max-width: 480px;
+}
+.hero__title {
+  font-size: 105px;
+  line-height: 0.8;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.hero__title span {
+  text-align: right;
+  font-size: 50px;
+  line-height: 57px;
+}
+.hero__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.hero__link {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 33px;
+  color: #fff;
+  padding: 22px 32px;
+  background-color: #eb4c56;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.hero__link:hover {
+  background-color: #fff;
+  color: #1b1a1f;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.hero__img {
+  max-width: 100%;
+}
+.hero__social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero__social svg {
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
