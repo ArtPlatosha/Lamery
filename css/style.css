@@ -10,6 +10,11 @@ body {
   color: #fff;
   background-color: #1b1a1f;
 }
+@media (max-width: 768px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
 
 .wrapper {
   overflow: hidden;
@@ -32,6 +37,7 @@ body {
   padding: 30px 0;
   border-bottom: 1px solid #8d8c8f;
   position: relative;
+  animation: social-link 2s ease-in-out;
 }
 .header::before {
   content: "";
@@ -216,6 +222,7 @@ body {
   flex-direction: column;
   margin-bottom: 50px;
   width: 100%;
+  animation: hero-text 1.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.3s;
 }
 @media (max-width: 768px) {
   .hero__title {
@@ -226,6 +233,7 @@ body {
   text-align: right;
   font-size: 50px;
   line-height: 57px;
+  animation: hero-text 1.8s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
 }
 @media (max-width: 768px) {
   .hero__title span {
@@ -238,6 +246,7 @@ body {
   font-size: 22px;
   line-height: 1;
   margin-bottom: 40px;
+  animation: hero-text 2s ease-in-out 0.3s;
 }
 @media (max-width: 768px) {
   .hero__text {
@@ -253,6 +262,7 @@ body {
   background-color: #eb4c56;
   display: inline-block;
   transition: all 0.3s ease-in-out;
+  animation: hero-link 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
 }
 .hero__link:hover {
   background-color: #fff;
@@ -270,6 +280,7 @@ body {
   top: 0;
   right: 0;
   z-index: -1;
+  animation: image-hero 2s ease-in-out;
 }
 @media (max-width: 768px) {
   .hero__image {
@@ -284,6 +295,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  animation: social-link 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 @media (max-width: 768px) {
   .hero__social {
@@ -297,4 +309,43 @@ body {
 }
 .hero__social svg {
   transition: all 0.3s ease-in-out;
+}
+
+@keyframes image-hero {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes hero-text {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes hero-link {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes social-link {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
